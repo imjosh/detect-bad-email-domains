@@ -1,20 +1,24 @@
 // TODO add real tests with Jest
 const detect = require('../lib/index');
-const cache = require('../lib/cache');
+const asyncCache = require('../lib/cache');
 
 const domains = [
-  'zippiex.com',
-  'gmail.com',
-  'hotmail.com',
+  'sandcars.net', // parking crew
+  'royal.net', // smartname
+  'gmail.com', // ok cached
+  'hotmail.com', // ok
+  'rfc822.org', // bad dns
+  // 'robo3.me', // parking crew
+  // 'zippiex.com',// parking crew
 ];
 
 async function test() {
-  await cache.isReady();
+  const cache = await asyncCache;
   console.log(`Initial cache: ${cache.toJSON()}`);
 
   const promises = domains.map(domain => detect(domain)
-    .then(r => console.log(`${domain} is bad: ${r}`))
-    .catch(e => console.error(e, e.stack)));
+    .then(r => console.log(`${domain} is: ${r ? 'Bad' : 'OK'}`))
+    .catch(e => console.error(e)));
 
   Promise.all(promises)
     .then(() => console.log(`Resulting cache: ${cache.toJSON()}`));

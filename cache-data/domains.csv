@@ -1,3 +1,4 @@
-"rsvhr.com", "parkingcrew.net", true, "2019-01-15T21:06:37.900Z"
-"qualityservice.com", "smartname", true, "2019-01-15T21:06:37.900Z"
-"gmail.com", "", false, "2019-01-15T21:06:37.900Z"
+"domain","rule","deny","added"
+"rsvhr.com","parkingcrew.net",true,"2019-01-15T21:06:37.900Z"
+"qualityservice.com","smartname",true,"2019-01-15T21:06:37.900Z"
+"gmail.com","",false,"2019-01-15T21:06:37.900Z"

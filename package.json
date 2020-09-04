@@ -19,6 +19,6 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "papaparse": "^4.6.3"
+    "papaparse": "^5.2.0"
   }
 }

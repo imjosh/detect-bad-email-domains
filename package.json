@@ -18,7 +18,7 @@
     "eslint-plugin-standard": "^4.0.0"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "papaparse": "^4.6.3"
   }
 }
